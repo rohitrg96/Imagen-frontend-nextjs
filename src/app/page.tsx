@@ -1,3 +1,11 @@
+import Hero from '@/components/Hero';
+import PhotoText from '@/components/PhotoText';
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <main>
+      <Hero />
+      <PhotoText />
+    </main>
+  );
 }
