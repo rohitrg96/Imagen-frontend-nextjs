@@ -2,6 +2,7 @@
 
 import { FaPause, FaPlay } from 'react-icons/fa';
 import { useRef, useState } from 'react';
+import TitleDescription from './TitleDescription';
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -34,10 +35,10 @@ export default function Hero() {
 
       {/* Overlay content */}
       <div className="relative z-15 flex flex-col items-center justify-center h-full text-white text-center bg-black/40 px-4 sm:px-8">
-        <h1 className="text-8xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 p-5">Imagen</h1>
-        <p className="text-lg flex flex-col md:flex-row sm:text-lg md:text-xl mb-6 max-w-xl">
-          Our best image generation model yet, engineered for creativity
-        </p>
+        <TitleDescription
+          title="Imagen"
+          description="Our best image generation model yet, engineered for creativity"
+        />
         <div className="flex flex-col md:flex-row gap-4 items-center">
           <button className="px-5 py-4 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold w-60 md:w-auto">
             Try in Gemini &gt;
