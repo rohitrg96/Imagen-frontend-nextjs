@@ -4,6 +4,8 @@ import StickyNav from '@/components/StickyNav';
 
 import SectionOne from '@/components/SectionOne';
 import SectionTwo from '@/components/SectionTwo';
+import SectionThree from '@/components/SectionThree';
+import SectionFour from '@/components/SectionFour';
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
         <StickyNav />
         <SectionOne />
         <SectionTwo />
+        <SectionThree />
+        <SectionFour />
       </div>
     </main>
   );

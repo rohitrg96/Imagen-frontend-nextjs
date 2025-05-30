@@ -4,11 +4,14 @@ interface CardProps {
   imageSrc: string;
   title: string;
   description: string;
+  isTwoCards?: boolean;
 }
 
-export default function Card({ imageSrc, title, description }: CardProps) {
+export default function Card({ imageSrc, title, description, isTwoCards }: CardProps) {
   return (
-    <div className="w-[300px]  flex flex-col items-center text-center  rounded-2xl shadow-md p-3">
+    <div
+      className={`w-[300px]  flex flex-col items-center text-center  rounded-2xl shadow-md p-3 ${isTwoCards} ? border-gray-400 : ''`}
+    >
       <Image
         src={imageSrc}
         alt={title}
