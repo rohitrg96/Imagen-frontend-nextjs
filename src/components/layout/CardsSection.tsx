@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from '../ui/IconCard';
 
 interface CardItem {
   imageSrc: string;

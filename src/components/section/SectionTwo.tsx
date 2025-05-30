@@ -1,7 +1,7 @@
-import TitleDescription from './TitleDescription';
-import PhotoSlider from './PhotoSlider';
-import InfoCardGrid from './InfoCardsGrid';
-import CustomButton from './CustomButton';
+import TitleDescription from '../ui/TitleDescription';
+import PhotoSlider from '../ui/PhotoSlider';
+import InfoCardGrid from '../layout/InfoCardsGrid';
+import CustomButton from '../ui/CustomButton';
 
 export default function SectionTwo() {
   const sliderImages = ['images/b1.svg', 'images/b2.svg', 'images/b3.svg'];

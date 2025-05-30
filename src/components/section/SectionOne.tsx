@@ -1,8 +1,8 @@
-import TitleDescription from './TitleDescription';
-import PhotoSlider from './PhotoSlider';
-import ExpandableCard from './ExpandableCard';
-import CardsSection from './CardsSection';
-import ImageTextOverlay from './ImageTextOverlay';
+import TitleDescription from '../ui/TitleDescription';
+import PhotoSlider from '../ui/PhotoSlider';
+import ExpandableCard from '../ui/ExpandableCard';
+import CardsSection from '../layout/CardsSection';
+import ImageTextOverlay from '../ui/ImageTextOverlay';
 
 export default function SectionOne() {
   const sections = [

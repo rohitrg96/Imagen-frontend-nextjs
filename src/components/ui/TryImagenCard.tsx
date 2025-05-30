@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface TryImagenCardProps {
   imageSrc: string;
@@ -14,9 +14,7 @@ export default function TryImagenCard({ imageSrc, title, onClick }: TryImagenCar
     >
       {/* Redirect icon */}
       <div className="absolute bottom-4 right-4">
-        <div className="w-8 h-8 flex items-center justify-center rounded-md border-0 border-gray-300 text-gray-500 hover:text-black hover:border-black transition">
-          <ArrowUpRight size={16} />
-        </div>
+        <ExternalLink className="w-5 h-5" />
       </div>
 
       {/* Image */}

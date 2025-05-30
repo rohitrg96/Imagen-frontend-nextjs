@@ -10,7 +10,7 @@ interface TitleDescriptionProps {
 export default function TitleDescription({
   title,
   description,
-  titleSize = 'text-5xl md:text-6xl lg:text-7xl',
+  titleSize = 'text-6xl md:text-6xl lg:text-7xl',
   descSize = 'text-lg md:text-xl',
   descWidth = 'max-w-2xl',
   align = 'center',

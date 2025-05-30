@@ -5,6 +5,7 @@ interface CustomButtonProps {
   height?: string; // Tailwind height class (e.g., "h-12", "py-3")
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  topMargin?: string;
 }
 
 export default function CustomButton({
@@ -14,15 +15,16 @@ export default function CustomButton({
   height = 'py-4', // padding for height
   className = '',
   type = 'button',
+  topMargin = 'mt-10',
 }: CustomButtonProps) {
   return (
-    <div className="flex justify-center mt-10">
+    <div className={`flex justify-center ${topMargin}`}>
       <button
         type={type}
         onClick={onClick}
-        className={`px-5 ${height} bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold ${width} ${className}`}
+        className={`px-5 ${height} bg-cyan-500 text-white rounded-full hover:bg-cyan-400 transition font-semibold ${width} ${className}`}
       >
-        {children}
+        <div className="flex items-center gap-2 justify-center">{children}</div>
       </button>
     </div>
   );

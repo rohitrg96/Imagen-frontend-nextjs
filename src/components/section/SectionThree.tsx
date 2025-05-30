@@ -1,5 +1,5 @@
-import TitleDescription from './TitleDescription';
-import CustomButton from './CustomButton';
+import TitleDescription from '../ui/TitleDescription';
+import CustomButton from '../ui/CustomButton';
 
 export default function SectionThree() {
   const safetyTitle = {

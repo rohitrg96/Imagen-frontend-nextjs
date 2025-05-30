@@ -1,9 +1,9 @@
-import TitleDescription from './TitleDescription';
-import CardsSection from './CardsSection';
+import TitleDescription from '../ui/TitleDescription';
+import CardsSection from '../layout/CardsSection';
 
-export default function SectionFive() {
+export default function SectionFour() {
   const showCaseTitle = {
-    title: 'Try Imagen',
+    title: 'Imagen in the hands of developers',
     titleSize: 'text-2xl md:text-4xl lg:text-4xl',
     cards: [
       {

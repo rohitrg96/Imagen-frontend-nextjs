@@ -48,22 +48,6 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/20 pt-8">
-        <p className="mb-4 text-sm text-white">Sign up for updates on our latest innovations</p>
-        <p className="mb-2 text-xs text-white/60">
-          I accept Google's Terms and Conditions and acknowledge that my information will be used in
-          accordance with Google's Privacy Policy.
-        </p>
-        <div className="flex items-center gap-2">
-          <input
-            type="email"
-            placeholder="Email address"
-            className="px-4 py-2 rounded bg-white text-black w-full max-w-xs"
-          />
-          <span className="text-white text-lg">{'›'}</span> {/* chevron_right replacement */}
-        </div>
-      </div>
-
       <div className="flex flex-col sm:flex-row justify-between items-center mt-10 text-xs text-white/60">
         <div className="space-x-4">
           <span>About Google</span>

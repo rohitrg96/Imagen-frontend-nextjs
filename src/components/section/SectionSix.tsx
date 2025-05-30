@@ -1,5 +1,5 @@
-import TitleDescription from './TitleDescription';
-import TryImagenCardsGrid from './TryImagenCardsGrid';
+import TitleDescription from '../ui/TitleDescription';
+import TryImagenCardsGrid from '../layout/TryImagenCardsGrid';
 
 export default function SectionSix() {
   const showCaseTitle = {
