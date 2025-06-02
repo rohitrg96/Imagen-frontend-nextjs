@@ -113,7 +113,7 @@ export const cardTitleDes = {
 };
 
 export const sliderTitleDes = {
-  title: 'Imagine it — visualize it',
+  title: 'Imagine it - visualize it',
   description:
     'Express your ideas like never before — with Imagen, creativity has no limits.',
   images: [

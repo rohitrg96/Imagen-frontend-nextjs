@@ -1,3 +1,4 @@
+import lineClamp from '@tailwindcss/line-clamp';
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}', // scan all JS/TS files in src folder
@@ -7,8 +8,9 @@ module.exports = {
     extend: {
       colors: {
         primary: '#1DA1F2',
+        googleGray: '#9aa0a6',
       },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [lineClamp],
 };

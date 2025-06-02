@@ -1,4 +1,5 @@
 'use client';
+
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PhotoSliderProps } from '@/types/PhotoSliderProps.types';
@@ -8,6 +9,7 @@ import {
   getPrevDotAnimation,
 } from '@/animations/sliderAnimations';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function PhotoSlider({ images }: PhotoSliderProps) {
   const { current, goPrev, goNext, setCurrent, direction } = usePhotoSlider(
@@ -23,11 +25,18 @@ export default function PhotoSlider({ images }: PhotoSliderProps) {
     <>
       <div className="w-full flex flex-col items-center py-10">
         <div className="relative w-4/5 max-w-5xl overflow-hidden rounded-2xl shadow-lg">
-          <img
-            src={images[current]}
-            alt={`Slide ${current + 1}`}
-            className="w-full h-[200px] sm:h-[400px] md:h-[500px] object-cover transition duration-500 ease-in-out"
-          />
+          {/* Optimized Next.js Image */}
+          <div className="relative w-full h-[200px] sm:h-[400px] md:h-[500px]">
+            <Image
+              src={images[current]}
+              alt={`Slide ${current + 1}`}
+              fill
+              priority
+              className="object-cover transition duration-500 ease-in-out rounded-2xl"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+            />
+          </div>
+
           {current !== 0 && (
             <button
               onClick={goPrev}
@@ -49,7 +58,7 @@ export default function PhotoSlider({ images }: PhotoSliderProps) {
 
       {/* Scrollable Dot Navigation */}
       <div className="mt-6 w-full overflow-x-auto px-4">
-        <div className="flex justify-center min-w-max space-x-4">
+        <div className="flex justify-center min-w-max space-x-1 sm:space-x-2 md:space-x-3">
           {images.map((_, index) => {
             const isActive = index === current;
             const isPrev = index === prevIndex && index !== current;
@@ -59,13 +68,13 @@ export default function PhotoSlider({ images }: PhotoSliderProps) {
                 {/* Gray base dot */}
                 <div
                   onClick={() => setCurrent(index)}
-                  className="w-3 h-3 rounded-full cursor-pointer bg-gray-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  className="w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer border-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 />
                 <AnimatePresence initial={false}>
                   {isPrev && (
                     <motion.div
                       key={`prev-${index}`}
-                      className="absolute top-1/2 left-1/2 bg-gray-300 rounded-full z-10"
+                      className="absolute top-1/2 left-1/2 border-1 rounded-full z-10"
                       {...getPrevDotAnimation()}
                     />
                   )}

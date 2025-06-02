@@ -7,10 +7,15 @@ interface CardProps {
   isTwoCards?: boolean;
 }
 
-export default function Card({ imageSrc, title, description, isTwoCards }: CardProps) {
+export default function Card({
+  imageSrc,
+  title,
+  description,
+  isTwoCards,
+}: CardProps) {
   return (
     <div
-      className={`w-full max-w-[300px] flex flex-col items-center text-center rounded-2xl shadow-md p-4 ${
+      className={`w-full  max-w-[300px] h-full flex flex-col items-center text-center rounded-2xl shadow-md p-4 ${
         isTwoCards ? 'border border-gray-400' : ''
       }`}
     >

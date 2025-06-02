@@ -1,18 +1,8 @@
 import TitleDescription from '../ui/TitleDescription';
 import TryImagenCardsGrid from '../layout/TryImagenCardsGrid';
+import { showCaseTitle } from '@/content/sectionFive';
 
 export default function SectionFive() {
-  const showCaseTitle = {
-    title: 'Try Imagen',
-    titleSize: 'text-2xl md:text-4xl lg:text-4xl',
-    cards: [
-      { imageSrc: '/images/T1.svg', title: 'Gemini' },
-      { imageSrc: '/images/T2.svg', title: 'Whisk' },
-      { imageSrc: '/images/T3.svg', title: 'Google AI Studio' },
-      { imageSrc: '/images/T4.svg', title: 'Vertex AI Studio' },
-    ],
-  };
-
   return (
     <section id="Try Imagen" className="scroll-mt-20">
       <div className="mt-15">
