@@ -8,7 +8,6 @@ import SectionThree from '@/components/section/SectionThree';
 import SectionFour from '@/components/section/SectionFour';
 import SectionSix from '@/components/section/SectionSix';
 import Acknowledgements from '@/components/section/Acknowledgements';
-import { Footer } from '@/components/layout/Footer';
 
 export default function Home() {
   return (

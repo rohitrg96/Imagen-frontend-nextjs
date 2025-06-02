@@ -136,15 +136,15 @@ export default function SectionOne() {
 
   return (
     <>
-      {sections.map((section, index) => (
+      {/* {sections.map((section, index) => (
         <div key={index} className="mb-16">
           <TitleDescription title={section.title} description={section.description} />
           <PhotoSlider images={section.images} />
         </div>
-      ))}
-      <TitleDescription title={cardSection.title} description={cardSection.description} />
+      ))} */}
+      {/* <TitleDescription title={cardSection.title} description={cardSection.description} />
       <ExpandableCard items={cardSection.items} />
-      <TitleDescription title={cardTitleDes.title} description={cardTitleDes.description} />
+      <TitleDescription title={cardTitleDes.title} description={cardTitleDes.description} /> */}
       <CardsSection cards={cards} />
       <TitleDescription title={sliderTitleDes.title} description={sliderTitleDes.description} />
       <PhotoSlider images={sliderTitleDes.images} />
