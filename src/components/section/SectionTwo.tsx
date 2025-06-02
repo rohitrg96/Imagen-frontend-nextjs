@@ -45,8 +45,8 @@ export default function SectionTwo() {
   ];
 
   return (
-    <>
-      <div className="mt-15">
+    <section id="Benchmarks" className="scroll-mt-20">
+      <div>
         <TitleDescription
           title={benchMarkTitle.title}
           description={benchMarkTitle.description}
@@ -71,6 +71,6 @@ export default function SectionTwo() {
           <InfoCardGrid cards={infoCards} />
         </div>
       </div>
-    </>
+    </section>
   );
 }

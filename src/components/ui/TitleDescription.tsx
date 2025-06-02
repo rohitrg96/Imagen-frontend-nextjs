@@ -1,11 +1,4 @@
-interface TitleDescriptionProps {
-  title: string | string[];
-  description?: string | string[];
-  titleSize?: string; // Tailwind class for title size
-  descSize?: string; // Tailwind class for description size
-  descWidth?: string; // Tailwind class for description width
-  align?: 'left' | 'center' | 'right';
-}
+import { TitleDescriptionProps } from '@/types/TitleDescription.types';
 
 export default function TitleDescription({
   title,
@@ -25,7 +18,9 @@ export default function TitleDescription({
   return (
     <div className={`flex flex-col ${alignClass} justify-center p-4 m-8`}>
       <h1 className={`${titleSize} font-bold mb-12 `}>
-        {Array.isArray(title) ? title.map((line, i) => <div key={i}>{line}</div>) : title}
+        {Array.isArray(title)
+          ? title.map((line, i) => <div key={i}>{line}</div>)
+          : title}
       </h1>
       <p className={`${descSize} ${descWidth} text-neutral-400`}>
         {Array.isArray(description)

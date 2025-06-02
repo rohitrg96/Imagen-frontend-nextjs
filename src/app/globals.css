@@ -9,6 +9,10 @@ body {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hides the horizontal scrollbar while still allowing scroll */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

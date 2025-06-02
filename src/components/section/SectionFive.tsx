@@ -1,33 +1,27 @@
 import TitleDescription from '../ui/TitleDescription';
-import CardsSection from '../layout/CardsSection';
+import TryImagenCardsGrid from '../layout/TryImagenCardsGrid';
 
 export default function SectionFive() {
   const showCaseTitle = {
     title: 'Try Imagen',
     titleSize: 'text-2xl md:text-4xl lg:text-4xl',
     cards: [
-      {
-        imageSrc: '/images/sh1.svg',
-        title: 'Cartwheel',
-        description:
-          'Cartwheels text-to-animation platform uses Imagen to create 3D character animations',
-      },
-      {
-        imageSrc: '/images/sh2.svg',
-        title: 'Viggle',
-        description: 'Experimenting with Imagen 3 in its AI video creation toolset',
-      },
+      { imageSrc: '/images/T1.svg', title: 'Gemini' },
+      { imageSrc: '/images/T2.svg', title: 'Whisk' },
+      { imageSrc: '/images/T3.svg', title: 'Google AI Studio' },
+      { imageSrc: '/images/T4.svg', title: 'Vertex AI Studio' },
     ],
   };
 
   return (
-    <>
+    <section id="Try Imagen" className="scroll-mt-20">
       <div className="mt-15">
-        <TitleDescription title={showCaseTitle.title} titleSize={showCaseTitle.titleSize} />
-        <div className="flex justify-evenly">
-          <CardsSection cards={showCaseTitle.cards} />
-        </div>
+        <TitleDescription
+          title={showCaseTitle.title}
+          titleSize={showCaseTitle.titleSize}
+        />
+        <TryImagenCardsGrid cards={showCaseTitle.cards} />
       </div>
-    </>
+    </section>
   );
 }

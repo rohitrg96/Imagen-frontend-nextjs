@@ -1,13 +1,12 @@
 import Hero from '@/components/section/Hero';
 import PhotoText from '@/components/section/PhotoText';
 import StickyNav from '@/components/ui/StickyNav';
-
 import SectionOne from '@/components/section/SectionOne';
 import SectionTwo from '@/components/section/SectionTwo';
 import SectionThree from '@/components/section/SectionThree';
 import SectionFour from '@/components/section/SectionFour';
-import SectionSix from '@/components/section/SectionSix';
 import Acknowledgements from '@/components/section/Acknowledgements';
+import SectionFive from '@/components/section/SectionFive';
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
       <SectionTwo />
       <SectionThree />
       <SectionFour />
-      <SectionSix />
+      <SectionFive />
       <Acknowledgements />
     </main>
   );

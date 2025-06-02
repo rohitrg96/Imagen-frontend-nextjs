@@ -13,7 +13,7 @@ export default function SectionThree() {
   };
 
   return (
-    <>
+    <section id="Safety & Responsibility" className="scroll-mt-20">
       <div className="mt-15">
         <TitleDescription
           title={safetyTitle.title}
@@ -26,6 +26,6 @@ export default function SectionThree() {
           Learn more about SynthID
         </CustomButton>
       </div>
-    </>
+    </section>
   );
 }
