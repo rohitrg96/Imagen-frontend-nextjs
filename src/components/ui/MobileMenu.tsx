@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import { X } from 'lucide-react';
 import { menuItems } from '@/content/navBar';
-
-interface MobileMenuProps {
-  open: boolean;
-  onClose: () => void;
-}
+import { MobileMenuProps } from '@/types/Navbar.types';
 
 export default function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (

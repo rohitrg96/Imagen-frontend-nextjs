@@ -1,13 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import TitleDescription from './TitleDescription';
-
-interface ImageTextOverlayProps {
-  imageSrc: string;
-  line1: string;
-  buttonText?: string;
-  buttonLink?: string;
-}
+import { ImageTextOverlayProps } from '@/types/ImageTextOverlays';
 
 export default function ImageTextOverlay({
   imageSrc,

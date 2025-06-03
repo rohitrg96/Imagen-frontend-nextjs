@@ -2,12 +2,7 @@
 
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
-
-interface TryImagenCardProps {
-  imageSrc: string;
-  title: string;
-  onClick?: () => void;
-}
+import { TryImagenCardProps } from '@/types/Icard.type';
 
 export default function TryImagenCard({
   imageSrc,

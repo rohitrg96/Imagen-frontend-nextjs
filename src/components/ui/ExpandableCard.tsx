@@ -1,21 +1,11 @@
 'use client';
-import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
 import Image from 'next/image';
+import { Plus, Minus } from 'lucide-react';
 import { ExpandableCardProps } from '@/types/Ecard.types';
+import { useExpandableStates } from '@/hooks/useExpandableStates';
 
 export default function ExpandableCard({ items }: ExpandableCardProps) {
-  const [expandedStates, setExpandedStates] = useState<boolean[]>(() =>
-    new Array(items.length).fill(false)
-  );
-
-  const toggleExpand = (index: number) => {
-    setExpandedStates((prev) => {
-      const newStates = [...prev];
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
-  };
+  const { expandedStates, toggleExpand } = useExpandableStates(items.length);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[2.5%] gap-y-6 px-[5%] py-8 max-w-6xl mx-auto">

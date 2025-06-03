@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function usePhotoSlider(length: number) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<'next' | 'prev'>('next');
+  const [prevIndex, setPrevIndex] = useState<number | null>(null);
 
   const goNext = () => {
     setDirection('next');
@@ -14,5 +15,9 @@ export function usePhotoSlider(length: number) {
     setCurrent((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
-  return { current, setCurrent, direction, goNext, goPrev };
+  useEffect(() => {
+    setPrevIndex(current);
+  }, [current]);
+
+  return { current, setCurrent, direction, goNext, goPrev, prevIndex };
 }

@@ -36,6 +36,7 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' },
       ],
+      '@typescript-eslint/no-require-imports': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
       'react/jsx-curly-brace-presence': [

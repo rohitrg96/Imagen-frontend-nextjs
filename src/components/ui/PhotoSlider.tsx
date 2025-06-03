@@ -8,18 +8,11 @@ import {
   getActiveDotAnimation,
   getPrevDotAnimation,
 } from '@/animations/sliderAnimations';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function PhotoSlider({ images }: PhotoSliderProps) {
-  const { current, goPrev, goNext, setCurrent, direction } = usePhotoSlider(
-    images.length
-  );
-  const [prevIndex, setPrevIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    setPrevIndex(current);
-  }, [current]);
+  const { current, goPrev, goNext, setCurrent, direction, prevIndex } =
+    usePhotoSlider(images.length);
 
   return (
     <>

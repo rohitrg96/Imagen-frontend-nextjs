@@ -1,11 +1,5 @@
 import Image from 'next/image';
-
-interface CardProps {
-  imageSrc: string;
-  title: string;
-  description: string;
-  isTwoCards?: boolean;
-}
+import { CardProps } from '@/types/Icard.type';
 
 export default function Card({
   imageSrc,
