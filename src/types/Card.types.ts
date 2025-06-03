@@ -1,8 +1,9 @@
 export interface CardItem {
-  image: string;
-  text: string;
+  imageSrc: string;
+  title: string;
+  description: string;
 }
 
-export interface ExpandableCardProps {
-  items: CardItem[];
+export interface CardsSectionProps {
+  cards: CardItem[];
 }

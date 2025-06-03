@@ -1,14 +1,6 @@
 import Card from '../ui/IconCard';
 
-interface CardItem {
-  imageSrc: string;
-  title: string;
-  description: string;
-}
-
-interface CardsSectionProps {
-  cards: CardItem[];
-}
+import { CardItem, CardsSectionProps } from '@/types/Card.types';
 
 export default function CardsSection({ cards }: CardsSectionProps) {
   const isTwoCards = cards.length === 2;

@@ -16,7 +16,7 @@ export default function TryImagenCard({
 }: TryImagenCardProps) {
   return (
     <div
-      className="relative rounded-2xl shadow-md flex flex-col justify-center sm:h-72 w-full cursor-pointer hover:shadow-lg transition border-1"
+      className="relative rounded-2xl shadow-md flex flex-col justify-center sm:h-72 h-50 w-full cursor-pointer hover:shadow-lg transition border-1"
       onClick={onClick}
     >
       {/* Redirect icon */}

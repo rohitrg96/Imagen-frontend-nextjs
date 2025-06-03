@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import Image from 'next/image';
-import { ExpandableCardProps } from '@/types/Card.types';
+import { ExpandableCardProps } from '@/types/Ecard.types';
 
 export default function ExpandableCard({ items }: ExpandableCardProps) {
   const [expandedStates, setExpandedStates] = useState<boolean[]>(() =>
