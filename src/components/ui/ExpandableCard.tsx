@@ -19,7 +19,7 @@ export default function ExpandableCard({ items }: ExpandableCardProps) {
             <Image
               src={item.image}
               alt={`Image ${index + 1}`}
-              fill
+              fill={true}
               className="object-cover"
             />
           </div>

@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PhotoSliderProps } from '@/types/PhotoSliderProps.types';
@@ -33,6 +33,7 @@ export default function PhotoSlider({ images }: PhotoSliderProps) {
           {current !== 0 && (
             <button
               onClick={goPrev}
+              aria-label="Previous slide"
               className="absolute top-1/2 left-0 -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-100 z-10"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -41,6 +42,7 @@ export default function PhotoSlider({ images }: PhotoSliderProps) {
           {current !== images.length - 1 && (
             <button
               onClick={goNext}
+              aria-label="Next slide"
               className="absolute top-1/2 right-0 -translate-y-1/2 bg-white text-black rounded-full p-2 shadow-md hover:bg-gray-100 z-10"
             >
               <ChevronRight className="w-6 h-6" />
@@ -60,6 +62,8 @@ export default function PhotoSlider({ images }: PhotoSliderProps) {
               <div key={index} className="relative w-8 h-5">
                 {/* Gray base dot */}
                 <div
+                  role="button"
+                  data-testid="dot-button"
                   onClick={() => setCurrent(index)}
                   className="w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer border-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 />

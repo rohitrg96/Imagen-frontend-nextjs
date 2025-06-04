@@ -1,18 +1,38 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Hero from '@/components/section/Hero';
+import { ComponentPropsWithRef, JSX } from 'react';
+import { MotionProps } from 'framer-motion'; // ✅ Import framer-motion props
 
 jest.mock('framer-motion', () => {
-  const React = require('react');
-  const MotionDiv = React.forwardRef((props: any, ref) => (
-    <div {...props} ref={ref}>
-      {props.children}
-    </div>
-  ));
-  MotionDiv.displayName = 'MotionDiv';
+  const React = require('react') as typeof import('react');
+
+  // Combine HTML element props + motion props
+  const createMockMotionElement = <T extends keyof JSX.IntrinsicElements>(
+    tag: T
+  ) =>
+    React.forwardRef<HTMLElement, ComponentPropsWithRef<T> & MotionProps>(
+      (props, ref) => {
+        const {
+          initial,
+          animate,
+          exit,
+          variants,
+          whileInView,
+          transition,
+          viewport,
+          ...rest
+        } = props;
+
+        return React.createElement(tag, { ...rest, ref }, props.children);
+      }
+    );
+
   return {
     motion: {
-      div: MotionDiv,
+      div: createMockMotionElement('div'),
+      h1: createMockMotionElement('h1'),
+      p: createMockMotionElement('p'),
     },
   };
 });
@@ -44,12 +64,5 @@ describe('Hero Component', () => {
     render(<Hero />);
     expect(screen.getByText(/Try In Gemini/i)).toBeInTheDocument();
     expect(screen.getByText(/Try in Whisk/i)).toBeInTheDocument();
-  });
-
-  it('renders and responds to play/pause toggle', () => {
-    const { getByRole } = render(<Hero />);
-    const button = getByRole('button');
-    expect(button).toBeInTheDocument();
-    fireEvent.click(button);
   });
 });

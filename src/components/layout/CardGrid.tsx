@@ -3,14 +3,10 @@ import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import Image from 'next/image';
 import { items } from '@/content/card';
+import { useExpandableCard } from '@/hooks/useExpandableStates';
 
 export default function CardGrid() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-  const toggleExpand = (index: number) => {
-    setExpandedIndex((prev) => (prev === index ? null : index));
-  };
-
+  const { expandedIndex, toggleExpand } = useExpandableCard();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[2.5%] gap-y-6 px-[5%] py-8 max-w-6xl mx-auto">
       {items.map((item, index) => (
