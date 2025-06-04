@@ -45,4 +45,21 @@ export default [
       ],
     },
   },
+  //  override for test files
+  {
+    files: ['**/__tests__/**/*.{ts,tsx}', '**/*.test.{ts,tsx}'],
+    rules: {
+      // allow explicit any in tests:
+      '@typescript-eslint/no-explicit-any': 'off',
+      'react/display-name': 'off',
+
+      '@typescript-eslint/no-require-imports': 'off',
+
+      // And relax unused vars warnings in tests
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
+    },
+  },
 ];

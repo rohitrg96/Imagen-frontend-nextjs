@@ -15,3 +15,16 @@ export function useExpandableStates(length: number) {
 
   return { expandedStates, toggleExpand };
 }
+
+export function useExpandableCard() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex((prev) => (prev === index ? null : index));
+  };
+
+  return {
+    expandedIndex,
+    toggleExpand,
+  };
+}

@@ -10,7 +10,7 @@ export interface CardsGridProps {
 export interface CardProps {
   imageSrc: string;
   title: string;
-  description: string;
+  description?: string;
   isTwoCards?: boolean;
 }
 

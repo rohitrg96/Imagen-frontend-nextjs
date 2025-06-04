@@ -1,5 +1,4 @@
 import Card from '../ui/IconCard';
-
 import { CardsSectionProps } from '@/types/Card.types';
 
 export default function CardsSection({ cards }: CardsSectionProps) {

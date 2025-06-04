@@ -2,10 +2,22 @@
 
 import { motion } from 'framer-motion';
 import { usePhotoText } from '../../hooks/usePhotoText';
-import { wordVariants, lineVariants } from '../../animations/wordStaggerVariants';
+import {
+  wordVariants,
+  lineVariants,
+} from '../../animations/wordStaggerVariants';
 import { photoTextLines } from '../../content/photoTextLines';
+import { JSX } from 'react';
 
-export default function PhotoText() {
+/**
+ * PhotoText component displays animated lines of text with staggered word animations.
+ * It uses the `usePhotoText` hook to detect when the text is in the viewport
+ * and triggers the animation accordingly.
+ *
+ * @component
+ * @returns {JSX.Element} Animated photo text section
+ */
+export default function PhotoText(): JSX.Element {
   const { ref, isInView } = usePhotoText({ once: false });
 
   return (

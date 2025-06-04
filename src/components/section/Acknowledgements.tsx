@@ -1,4 +1,3 @@
-// components/Acknowledgements.tsx
 'use client';
 import { acknowledgementsData } from '@/content/acknowledgementsData';
 
