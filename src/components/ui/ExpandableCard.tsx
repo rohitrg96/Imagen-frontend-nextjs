@@ -19,8 +19,10 @@ export default function ExpandableCard({ items }: ExpandableCardProps) {
             <Image
               src={item.image}
               alt={`Image ${index + 1}`}
-              fill={true}
+              fill
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 40vw"
               className="object-cover"
+              priority={index === 0} // Optional: prioritize first image
             />
           </div>
 
