@@ -45,11 +45,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 .
 ├── public/
 ├── src/
+│   ├── app/
+│   ├── animations/
 │   ├── components/
-│   ├── sections/
+│   ├── content/
 │   ├── hooks/
-│   └── app/
-├── styles/
+│   └── types/
 ├── jest.config.js
 ├── tailwind.config.js
 └── README.md
