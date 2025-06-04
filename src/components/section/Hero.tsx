@@ -6,8 +6,19 @@ import { motion } from 'framer-motion';
 import TitleDescription from '../ui/TitleDescription';
 import CustomButton from '../ui/CustomButton';
 import { ChevronRight } from 'lucide-react';
+import { JSX } from 'react';
 
-export default function Hero() {
+/**
+ * Hero component that displays a fullscreen video background with
+ * overlayed animated title, description, and buttons.
+ * Includes a toggle button to play/pause the background video.
+ *
+ * Utilizes the `useVideoPlayback` hook to control video playback state.
+ *
+ * @component
+ * @returns {JSX.Element} The Hero section UI with video and overlay content.
+ */
+export default function Hero(): JSX.Element {
   const { videoRef, isPlaying, togglePlayback } = useVideoPlayback();
 
   return (

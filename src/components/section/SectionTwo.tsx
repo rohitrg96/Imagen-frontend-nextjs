@@ -8,8 +8,20 @@ import {
   creativeTitle,
   infoCards,
 } from '@/content/sectionTwo';
+import { JSX } from 'react';
 
-export default function SectionTwo() {
+/**
+ * SectionTwo component renders the "Benchmarks" section of the page.
+ *
+ * It displays a section title with a call-to-action button, a photo slider showcasing benchmark results,
+ * and another subsection that highlights creative capabilities using cards.
+ *
+ * All content (titles, descriptions, images, and cards) is sourced from the `sectionTwo` content module.
+ *
+ * @component
+ * @returns {JSX.Element} The complete "Benchmarks" section including slider and info cards.
+ */
+export default function SectionTwo(): JSX.Element {
   return (
     <section id="Benchmarks" className="scroll-mt-20">
       <div>
@@ -21,12 +33,12 @@ export default function SectionTwo() {
         />
 
         {/* Center the button */}
-
         <CustomButton width="w-auto" height="py-3">
           View Model Card
         </CustomButton>
 
         <PhotoSlider images={sliderImages} />
+
         <div className="mt-10 mb-10">
           <TitleDescription
             title={creativeTitle.title}
